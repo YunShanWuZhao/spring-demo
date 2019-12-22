@@ -18,10 +18,10 @@ public class NotNullProcessTool {
         Field[] fields = clazz.getDeclaredFields();
         for(Field field:fields){
             field.setAccessible(true);
-            Annotation annotation = field.getAnnotation(NotNull.class);
+            NotNull annotation = field.getAnnotation(NotNull.class);
             try {
                 if(annotation != null && (field.get(paramObj) == null || StringUtils.isEmpty(field.get(paramObj)))){
-                    throw new BizException(ErrorCode.PARAM_NOTNULL);
+                    throw new BizException(ErrorCode.PARAM_NOTNULL.getCode(), ErrorCode.PARAM_NOTNULL.getMsg()+annotation.name());
                 }
             } catch (IllegalAccessException e) {
                 e.printStackTrace();

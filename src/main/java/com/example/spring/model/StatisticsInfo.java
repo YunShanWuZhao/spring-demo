@@ -7,10 +7,10 @@ public class StatisticsInfo {
 
     private String name;
 
-    @NotNull
+    @NotNull(name = "商户ID")
     private String merchantId;
 
-    @NotNull
+    @NotNull(name = "类型")
     private String type;
 
     public String getName() {

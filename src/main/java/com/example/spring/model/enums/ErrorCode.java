@@ -2,7 +2,8 @@ package com.example.spring.model.enums;
 
 public enum ErrorCode {
 
-    PARAM_NOTNULL(-1, "参数不能为空");
+    SYS_ERROR(-1,"系统异常"),
+    PARAM_NOTNULL(101, "参数不能为空：");
 
 
     ErrorCode(int code, String msg){
