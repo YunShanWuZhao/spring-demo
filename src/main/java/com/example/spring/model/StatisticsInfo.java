@@ -1,6 +1,7 @@
 package com.example.spring.model;
 
-import javax.validation.constraints.NotNull;
+
+import com.example.spring.annotation.NotNull;
 
 public class StatisticsInfo {
 
@@ -8,6 +9,9 @@ public class StatisticsInfo {
 
     @NotNull
     private String merchantId;
+
+    @NotNull
+    private String type;
 
     public String getName() {
         return name;
@@ -24,4 +28,13 @@ public class StatisticsInfo {
     public void setMerchantId(String merchantId) {
         this.merchantId = merchantId;
     }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
 }
