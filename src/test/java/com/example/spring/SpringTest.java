@@ -14,7 +14,6 @@ public class SpringTest {
 
     @Test
     public void test(){
-
         System.out.println(JSON.toJSONString(userMapper.selectById(1)));
     }
 }
